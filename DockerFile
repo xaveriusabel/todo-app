@@ -1,0 +1,16 @@
+# Gunakan image Node.js
+FROM node:18
+
+# Direktori kerja di container
+WORKDIR /app
+
+# Salin file dan install dependencies
+COPY client/ ./client
+WORKDIR /app/client
+RUN npm install && npm run build
+
+# Expose port aplikasi (default vite preview: 4173)
+EXPOSE 4173
+
+# Jalankan aplikasi
+CMD ["npm", "run", "preview"]
