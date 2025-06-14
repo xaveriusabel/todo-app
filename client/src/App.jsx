@@ -17,6 +17,13 @@ function App() {
       setTitle("");
     }
   };
+function test() {
+  const unused = 42;
+  const used = "Hello";
+  console.log(used);
+}
+
+test();
 
   return (
     <div>
