@@ -2,7 +2,7 @@ name: Continuous Deployment (Docker)
 
 on:
   push:
-    branches: [main]
+    branches: [main, deploy-testing]
 
 jobs:
   deploy:
